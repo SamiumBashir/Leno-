@@ -66,7 +66,7 @@ img{
     transition: background-color 0.3s ease-in-out;
 }
 
-.navbar.navbar-scroll{
+.navbar.navbar--scroll{
     background-color: rgba(38, 36, 49, 0.8);
     backdrop-filter: blur(10px);
 }
@@ -89,6 +89,11 @@ img{
     font-weight: 400;
 }
 
+.navbar__menu-link:hover,
+.navbar__mobile-menu-link:hover {
+  color: var(--primary-color);
+}
+
 .navbar__menu-link--primary,
 .navbar__mobile-menu-link--primary{
     color: var(--primary-color);
@@ -106,7 +111,7 @@ img{
     cursor: pointer;
 }
 
-.nav__mobile-menu-items{
+.navbar__mobile-menu-items{
     position: absolute;
     top: 100%;
     left: 0;
@@ -119,7 +124,14 @@ img{
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navbar__mobile-menu-list{
+.navbar__mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.navbar__mobile-menu-items{
     transform: translateX(100%);
 }
 
